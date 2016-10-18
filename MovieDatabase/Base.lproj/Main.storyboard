@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dv4-GM-tnU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MovieDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NFH-TK-gau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4sQ-Vx-Tcx"/>
+                    <connections>
+                        <outlet property="tableViewMovies" destination="NFH-TK-gau" id="pba-Ma-21a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="-577"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="vWH-OF-Tbk">
+            <objects>
+                <viewController storyboardIdentifier="PopoverViewController" id="acJ-xo-PbW" customClass="PopoverViewController" customModule="MovieDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKf-9o-BiM"/>
+                        <viewControllerLayoutGuide type="bottom" id="zwY-9l-G5O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yHC-cp-3gr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gBW-6h-gRl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zwY-9l-G5O" firstAttribute="top" secondItem="gBW-6h-gRl" secondAttribute="bottom" id="50A-dN-5CP"/>
+                            <constraint firstItem="gBW-6h-gRl" firstAttribute="leading" secondItem="yHC-cp-3gr" secondAttribute="leading" id="GfL-LR-rLd"/>
+                            <constraint firstItem="gBW-6h-gRl" firstAttribute="top" secondItem="yHC-cp-3gr" secondAttribute="top" id="JgH-Cz-QME"/>
+                            <constraint firstAttribute="trailing" secondItem="gBW-6h-gRl" secondAttribute="trailing" id="tOE-KB-Sxh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewMovies" destination="gBW-6h-gRl" id="Z04-Vh-cqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEn-Q2-age" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552.8" y="-577.06146926536735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NpY-nc-cde">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dv4-GM-tnU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8D3-su-3Yk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="apK-Hw-ZzS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM5-9z-XoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="-577.06146926536735"/>
+        </scene>
+    </scenes>
+</document>
